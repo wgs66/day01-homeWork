@@ -28,7 +28,8 @@ export const todoMain = {
       const item = {}
       item.name = payload
       item.done = false
-      item.id = state.list.length + 1
+      const id = state.list.length === 0 ? 0 : state.list[0].id
+      item.id = id + 1
       state.list.unshift(item)
     }
   },

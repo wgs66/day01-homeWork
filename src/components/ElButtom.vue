@@ -1,5 +1,5 @@
 <template>
-  <button :class="type" ref="btn" :disabled="disabled">{{ text }}</button>
+  <button :class="type" ref="btn" :disabled="disabled"><slot /></button>
 </template>
 
 <script>
@@ -12,10 +12,7 @@ export default {
     color: {
       type: String
     },
-    text: {
-      type: String,
-      default: '按钮'
-    },
+
     size: {
       type: String,
       default: 'small'

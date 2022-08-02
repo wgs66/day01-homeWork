@@ -9,13 +9,7 @@
     <br />
     <br />
     <br />
-    <ElButtom
-      type="info"
-      color="red"
-      text="哈哈哈"
-      size="large"
-      disabled
-    ></ElButtom>
+    <wgs-button round color="red">165165</wgs-button>
   </div>
 </template>
 
@@ -24,7 +18,6 @@ import { createNamespacedHelpers } from 'vuex'
 import TodoFooter from './components/TodoFooter.vue' // shift + alt + 下
 import TodoHeader from './components/TodoHeader.vue' // shift + alt + 下
 import TodoMain from './components/TodoMain.vue' // shift + alt + 下
-import ElButtom from './components/ElButtom.vue'
 const { mapActions } = createNamespacedHelpers('changeSkin')
 
 export default {
@@ -35,8 +28,7 @@ export default {
   components: {
     TodoFooter,
     TodoHeader,
-    TodoMain,
-    ElButtom
+    TodoMain
   },
 
   created() {},
@@ -48,7 +40,7 @@ export default {
       }
       color = color.slice(0, -1)
       color += ')'
-      // console.log(color)
+      console.log(color)
       this.changeFontColor(color)
     },
     ...mapActions(['changeFontColor'])
